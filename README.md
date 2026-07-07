@@ -86,17 +86,7 @@ Open `FAIFinalCode.ipynb` in Jupyter and run the **Random Forest** cell to launc
 
 Full methodology, confusion matrices, and discussion are in [`FAI_FinalReport.pdf`](./FAI_FinalReport.pdf).
 
-## 👥 Team A-14
 
-| Name | Roll No. |
-|---|---|
-| A. Deepthi | CB.SC.U4AIE23007 |
-| A. Sai Sanjana | CB.SC.U4AIE23013 |
-| K. Prerana | CB.SC.U4AIE23038 |
-| P. Srikari Shasi | CB.SC.U4AIE23053 |
-| Rithish A B | CB.SC.U4AIE23057 |
-
-*Fundamentals of AI (22AIE201) — Amrita School of Artificial Intelligence, Coimbatore*
 
 ## 🔮 Future Improvements
 
