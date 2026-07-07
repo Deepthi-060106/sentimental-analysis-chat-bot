@@ -36,3 +36,75 @@ Random Forest also outperformed KNN, SVM, Decision Tree, and Multinomial Naive B
 - 🧪 An experimental **LSTM** pipeline included for comparison
 
 ## 🗂️ Repository Structure
+## 📊 Dataset
+
+- **Source:** [Amazon Review Data (Electronics)](https://cseweb.ucsd.edu/~jmcauley/datasets.html#amazon_reviews) — Julian McAuley, UCSD
+- **Size:** 10,000 entries, 2 columns
+- **Columns:**
+  - `overall` — integer rating (1–5), used as a sentiment proxy
+  - `reviewText` — the review text itself
+- **Missing values:** 6 out of 10,000 (negligible)
+
+## 🛠️ Tech Stack
+
+- **Language:** Python 3
+- **ML/NLP:** scikit-learn (TF-IDF, RandomForestClassifier), NLTK (tokenization, stopwords, lemmatization), TensorFlow/Keras (LSTM)
+- **GUI:** Tkinter
+- **Visualization:** Matplotlib
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/Deepthi-060106/sentimental-analysis-chat-bot.git
+cd sentimental-analysis-chat-bot
+```
+
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Download NLTK data (first run only)
+```python
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+```
+
+### 4. Run it
+Open `FAIFinalCode.ipynb` in Jupyter and run the **Random Forest** cell to launch the Tkinter chatbot GUI (this is the primary, best-performing model). The LSTM cell above it is included for comparison/experimentation.
+
+> **Note:** the notebook currently loads the dataset from a hardcoded local path (`review_data(Sheet1).csv`). Update the path in the first code cell of each section to point to the CSV in this repo before running.
+
+## 📈 Results
+
+- **Random Forest (final model):** ~88.5% accuracy on held-out test data, with balanced precision and recall across positive/neutral/negative classes.
+- **LSTM (experimental):** ~64% accuracy — struggled to generalize sentiment patterns as well as the TF-IDF + tree-ensemble approach on this dataset.
+- Random Forest also beat KNN, SVM, Decision Tree, and Naive Bayes baselines in side-by-side comparison.
+
+Full methodology, confusion matrices, and discussion are in [`FAI_FinalReport.pdf`](./FAI_FinalReport.pdf).
+
+## 👥 Team A-14
+
+| Name | Roll No. |
+|---|---|
+| A. Deepthi | CB.SC.U4AIE23007 |
+| A. Sai Sanjana | CB.SC.U4AIE23013 |
+| K. Prerana | CB.SC.U4AIE23038 |
+| P. Srikari Shasi | CB.SC.U4AIE23053 |
+| Rithish A B | CB.SC.U4AIE23057 |
+
+*Fundamentals of AI (22AIE201) — Amrita School of Artificial Intelligence, Coimbatore*
+
+## 🔮 Future Improvements
+
+- Better handling of neutral sentiment misclassification
+- Replace hardcoded file paths with relative/configurable paths
+- Package the GUI as a standalone executable
+- Swap Tkinter for a web-based interface (Streamlit/Flask)
+
+## 📄 License
+
+This project is for academic purposes. Feel free to fork and build on it — attribution appreciated.
